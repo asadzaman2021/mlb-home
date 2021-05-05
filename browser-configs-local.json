@@ -1,0 +1,9 @@
+[
+	{ "platform": "macos", "browser": "CHROME_LATEST" },
+    { "platform": "macos", "browser": "SAFARI_11_HIGH_SIERRA" },
+    { "platform": "macos", "browser": "FIREFOX_LATEST" },
+    { "platform": "windows", "browser": "WIN_10_IE_11" },
+    { "platform": "windows", "browser": "WIN_10_EDGE_LATEST" },
+    { "platform": "windows", "browser": "WIN_10_CHROME_LATEST" },
+    { "platform": "windows", "browser": "WIN_10_FIREFOX_LATEST" }
+]

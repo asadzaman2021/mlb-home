@@ -1,0 +1,27 @@
+{
+  "name": "automation-mlbtv-homepage",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/polyfill": "^7.6.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/register": "^7.6.2",
+    "chai": "^4.2.0",
+    "chromedriver": "^90.0.0",
+    "cucumber": "^5.1.0",
+    "cucumber-junit-formatter": "^0.1.3",
+    "cucumber-pretty": "1.5",
+    "geckodriver": "^1.18.0",
+    "gulp": "^4.0.2",
+    "selenium-webdriver": "^3.6.0"
+  },
+  "scripts": {
+    "test": "cucumber-js ./features/**/*.feature --require './features/support/steps/**/*.steps.js' --require-module @babel/register --format node_modules/cucumber-junit-formatter:./reports/results.xml --format json:./reports/results.json --format node_modules/cucumber-pretty",
+    "test:local": "ENV=local cucumber-js ./features/**/*.feature --require './features/support/steps/**/*.steps.js' --require-module @babel/register --format node_modules/cucumber-junit-formatter:./reports/results.xml --format json:./reports/results.json --format node_modules/cucumber-pretty",
+    "test:qa": "ENV=qa cucumber-js ./features/**/*.feature --require './features/support/steps/**/*.steps.js' --require-module @babel/register --format node_modules/cucumber-junit-formatter:./reports/results.xml --format json:./reports/results.json",
+    "test:beta": "ENV=beta cucumber-js ./features/**/*.feature --require './features/support/steps/**/*.steps.js' --require-module @babel/register --format node_modules/cucumber-junit-formatter:./reports/results.xml --format json:./reports/results.json",
+    "test:prod": "ENV=production cucumber-js ./features/**/*.feature --require './features/support/steps/**/*.steps.js' --require-module @babel/register --format node_modules/cucumber-junit-formatter:./reports/results.xml --format json:./reports/results.json"
+  }
+}
