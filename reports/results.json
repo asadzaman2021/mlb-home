@@ -1,0 +1,75 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Authentication",
+    "line": 1,
+    "id": "authentication",
+    "tags": [],
+    "uri": "features/authentication.feature",
+    "elements": [
+      {
+        "id": "authentication;a-logged-in-user-is-able-to-view-the-mlb.tv-homepage",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "A logged in user is able to view the mlb.tv homepage",
+        "tags": [
+          {
+            "name": "@loggedin",
+            "line": 13
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/support/steps/mlbtv-hompage/mlbtv-homepage.steps.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1400000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "A logged in and entitled user visits the mlb.tv homepage",
+            "match": {
+              "location": "features/support/steps/mlbtv-hompage/mlbtv-homepage.steps.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9433000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "They can view the mlb.tv homepage",
+            "match": {
+              "location": "features/support/steps/mlbtv-hompage/mlbtv-homepage.steps.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 287000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/support/steps/mlbtv-hompage/mlbtv-homepage.steps.js:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

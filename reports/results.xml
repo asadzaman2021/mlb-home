@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="authentication;a-logged-in-user-is-able-to-view-the-mlb.tv-homepage" tests="2" failures="0" skipped="0" errors="0" time="11.121">
+    <properties>
+      <property name="tag" value="@loggedin">
+      </property>
+    </properties>
+    <testcase classname="a-logged-in-and-entitled-user-visits-the-mlb.tv-homepage" name="A logged in and entitled user visits the mlb.tv homepage" time="9.433">
+    </testcase>
+    <testcase classname="they-can-view-the-mlb.tv-homepage" name="They can view the mlb.tv homepage" time="0.287">
+    </testcase>
+  </testsuite>
+</testsuites>

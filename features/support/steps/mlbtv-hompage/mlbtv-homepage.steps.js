@@ -77,12 +77,18 @@ Then('They can view the mlb.tv homepage', async function () {
             BaseHomepage.SLEEP_DURATION * 4,
         )
         .then(() => {
+            homePage.getElementByXpath('//*[@class="header__nav-top__nav-item__text" and text()="Games"]');
+            homePage.getElementByXpath('//*[@class="header__nav-top__nav-item__text" and text()="Shows"]');
+            homePage.getElementByXpath('//*[@class="header__nav-top__nav-item__text" and text()="Account"]');
+        })
+        .then(() => {
             return homePage.driver.getCurrentUrl();
         })
         .then((url) => {
             return expect(url.indexOf('/tv')).to.be.greaterThan(-1);
         });
 });
+
 
 /* Given('I visit the SVOD player page', async function () {
     return playerPage.visit().then((featuredApp) => {

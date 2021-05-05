@@ -79,6 +79,24 @@ class BasePlayerPage {
             });
     }
 
+    getElementById(id) {
+        return this.driver
+            .wait(until.elementLocated(By.id(id), BasePlayerPage.SLEEP_DURATION))
+            .catch((error) => {
+                console.log(`error finding element with ID "${id}"`);
+                return null;
+            });
+    }
+
+    getElementByXpath(xpath) {
+        return this.driver
+            .wait(until.elementLocated(By.xpath(xpath), BasePlayerPage.SLEEP_DURATION))
+            .catch((error) => {
+                console.log(`error finding element with xpath "${xpath}"`);
+                return null;
+            });
+    }
+
     getElementByClassName(className) {
         return this.driver
             .wait(until.elementLocated(By.css(className), BasePlayerPage.SLEEP_DURATION))
@@ -90,7 +108,11 @@ class BasePlayerPage {
 
     logUserIn(user) {
         return this.driver
-            .get(this.getUrl(this.env, '/login'))
+            .get(this.getUrl(this.env, '/tv'))
+            .then(() => {
+                this.driver.findElement(By.xpath('//*[@class="header__nav-top__nav-item__text" and text()="Sign In"]')).click();
+                this.driver.findElement(By.xpath('//*[@class="header__nav-top__nav-item__text" and text()="Sign In"]')).click();
+            })
             .then(() => {
                 return this.driver.wait(
                     until.elementLocated(By.id('okta-signin-username')),
@@ -109,8 +131,7 @@ class BasePlayerPage {
                 submitBtn.click();
             })
             .then(() => {
-                this.driver.sleep(4000);
-                this.driver.get(this.getUrl(this.env, '/tv'))
+                this.driver.sleep(2000);
             });
 
     }
